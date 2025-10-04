@@ -55,10 +55,10 @@ export const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) =>
     }
 
     setLoading(true);
-    // TODO: Implement actual registration logic
+    // TODO: Implement actual registration logic with backend API
     setTimeout(() => {
       setLoading(false);
-      // navigation.navigate('Main');
+      navigation.navigate('Home');
     }, 1500);
   };
 

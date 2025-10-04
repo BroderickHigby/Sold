@@ -1,24 +1,24 @@
 export const colors = {
-  // Simple black and white
-  primary: '#FFFFFF', // White
-  primaryDark: '#FFFFFF',
-  primaryLight: '#FFFFFF',
+  // Simple black and white - high contrast
+  primary: '#000000', // Black for buttons
+  primaryDark: '#000000',
+  primaryLight: '#333333',
 
   // Secondary
-  secondary: '#000000', // Black
-  secondaryDark: '#000000',
-  secondaryLight: '#000000',
+  secondary: '#FFFFFF', // White
+  secondaryDark: '#E5E5E5',
+  secondaryLight: '#FFFFFF',
 
   // Accent
-  accent: '#FFFFFF',
-  accentDark: '#FFFFFF',
-  accentLight: '#FFFFFF',
+  accent: '#000000',
+  accentDark: '#000000',
+  accentLight: '#333333',
 
   // Success/Error/Warning
-  success: '#FFFFFF',
-  error: '#FFFFFF',
-  warning: '#FFFFFF',
-  info: '#FFFFFF',
+  success: '#000000',
+  error: '#000000',
+  warning: '#000000',
+  info: '#000000',
 
   // Grays
   gray50: '#F6F6F6',
@@ -32,36 +32,36 @@ export const colors = {
   gray800: '#181818',
   gray900: '#121212',
 
-  // Background - all black
-  background: '#000000',
-  backgroundDark: '#000000',
-  surface: '#000000',
-  surfaceDark: '#000000',
+  // Background - white
+  background: '#FFFFFF',
+  backgroundDark: '#F6F6F6',
+  surface: '#FFFFFF',
+  surfaceDark: '#F6F6F6',
 
-  // Text - all white
-  text: '#FFFFFF',
-  textSecondary: '#FFFFFF',
-  textLight: '#FFFFFF',
+  // Text
+  text: '#000000', // Black on white background
+  textSecondary: '#535353', // Gray
+  textLight: '#FFFFFF', // White text (for dark buttons)
   textDark: '#000000',
 
-  // Borders - white
-  border: '#FFFFFF',
-  borderDark: '#FFFFFF',
+  // Borders
+  border: '#E5E5E5', // Light gray borders
+  borderDark: '#000000',
 
   // Status
-  online: '#FFFFFF',
-  offline: '#FFFFFF',
+  online: '#000000',
+  offline: '#535353',
 
   // Transparent
   transparent: 'transparent',
-  overlay: 'rgba(0, 0, 0, 0.8)',
+  overlay: 'rgba(0, 0, 0, 0.5)',
 };
 
 export const gradients = {
-  primary: ['#FFFFFF', '#FFFFFF'], // White
-  secondary: ['#000000', '#000000'], // Black
-  success: ['#FFFFFF', '#FFFFFF'],
+  primary: ['#000000', '#000000'], // Solid black
+  secondary: ['#FFFFFF', '#FFFFFF'], // Solid white
+  success: ['#000000', '#000000'],
   dark: ['#000000', '#000000'],
-  green: ['#FFFFFF', '#FFFFFF'],
-  spotify: ['#000000', '#000000'], // All black
+  green: ['#000000', '#000000'],
+  spotify: ['#FFFFFF', '#FFFFFF'], // White background
 };

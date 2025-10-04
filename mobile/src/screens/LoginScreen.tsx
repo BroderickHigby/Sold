@@ -34,10 +34,10 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
     }
 
     setLoading(true);
-    // TODO: Implement actual login logic
+    // TODO: Implement actual login logic with backend API
     setTimeout(() => {
       setLoading(false);
-      // navigation.navigate('Main');
+      navigation.navigate('Home');
     }, 1500);
   };
 

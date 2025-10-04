@@ -5,6 +5,11 @@ import compression from 'compression';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 
+// Import routes
+import authRoutes from './routes/authRoutes';
+import itemRoutes from './routes/itemRoutes';
+import listingRoutes from './routes/listingRoutes';
+
 dotenv.config();
 
 const app: Application = express();
@@ -36,16 +41,21 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// API routes will be added here
+// API routes
+app.use('/api/auth', authRoutes);
+app.use('/api/items', itemRoutes);
+app.use('/api/listings', listingRoutes);
+
+// API info endpoint
 app.get('/api', (req, res) => {
   res.json({
     message: 'Sold API',
     version: '1.0.0',
     endpoints: {
       auth: '/api/auth',
-      users: '/api/users',
       items: '/api/items',
       listings: '/api/listings',
+      // TODO: Add remaining endpoints
       conversations: '/api/conversations',
       payments: '/api/payments',
       transactions: '/api/transactions',

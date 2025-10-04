@@ -10,6 +10,7 @@
     "mobile:dev": "pnpm --filter mobile start",
     "mobile:ios": "pnpm --filter mobile ios",
     "mobile:android": "pnpm --filter mobile android",
+    "mobile:web": "pnpm --filter mobile web",
     "mobile:test": "pnpm --filter mobile test",
     "shared:build": "pnpm --filter shared build",
     "lint": "eslint . --ext .ts,.tsx",

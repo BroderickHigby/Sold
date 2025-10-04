@@ -60,10 +60,10 @@ export const Button: React.FC<ButtonProps> = ({
     };
 
     const variantStyles: Record<string, TextStyle> = {
-      primary: { color: theme.colors.text }, // White text on green gradient
-      secondary: { color: theme.colors.text }, // White text
-      outline: { color: theme.colors.primary }, // Green text on transparent
-      ghost: { color: theme.colors.text }, // White text on transparent
+      primary: { color: theme.colors.textLight }, // White text on black button
+      secondary: { color: theme.colors.text }, // Black text on white button
+      outline: { color: theme.colors.primary }, // Black text on transparent
+      ghost: { color: theme.colors.text }, // Black text on transparent
     };
 
     return { ...baseStyle, ...variantStyles[variant] };
