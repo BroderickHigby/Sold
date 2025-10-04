@@ -3,10 +3,9 @@ import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView,
-  Image,
   Dimensions,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Button } from '../components';
 import { theme } from '../theme';
@@ -20,9 +19,9 @@ interface WelcomeScreenProps {
 export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
   return (
     <LinearGradient
-      colors={theme.gradients.purple}
+      colors={theme.gradients.spotify}
       start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 1 }}
+      end={{ x: 0, y: 1 }}
       style={styles.container}
     >
       <SafeAreaView style={styles.safeArea}>
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    backgroundColor: '#FFFFFF', // White circle
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: theme.spacing.lg,
@@ -122,16 +121,16 @@ const styles = StyleSheet.create({
   logoText: {
     fontSize: 48,
     fontWeight: '700',
-    color: theme.colors.textDark,
+    color: '#000000', // Black on white circle
   },
   appName: {
     ...theme.textStyles.h1,
-    color: theme.colors.textDark,
+    color: theme.colors.text, // White
     marginBottom: theme.spacing.sm,
   },
   tagline: {
     ...theme.textStyles.bodyLarge,
-    color: 'rgba(255, 255, 255, 0.9)',
+    color: theme.colors.textSecondary, // Gray
   },
   features: {
     marginVertical: theme.spacing.xl,
@@ -139,10 +138,12 @@ const styles = StyleSheet.create({
   featureItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: theme.colors.surface, // Dark surface
     borderRadius: theme.borderRadius.lg,
     padding: theme.spacing.lg,
     marginBottom: theme.spacing.md,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
   },
   featureIcon: {
     fontSize: 32,
@@ -154,18 +155,17 @@ const styles = StyleSheet.create({
   featureTitle: {
     ...theme.textStyles.body,
     fontWeight: '600',
-    color: theme.colors.textDark,
+    color: theme.colors.text, // White
     marginBottom: 4,
   },
   featureDescription: {
     ...theme.textStyles.bodySmall,
-    color: 'rgba(255, 255, 255, 0.8)',
+    color: theme.colors.textSecondary, // Gray
   },
   actions: {
     gap: theme.spacing.md,
   },
   primaryButton: {
-    backgroundColor: theme.colors.textDark,
     ...theme.shadows.lg,
   },
 });

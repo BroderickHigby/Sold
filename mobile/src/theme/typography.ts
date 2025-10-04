@@ -33,46 +33,46 @@ export const textStyles = {
   h1: {
     fontSize: typography.fontSize['4xl'],
     fontWeight: typography.fontWeight.bold,
-    lineHeight: typography.lineHeight.tight,
+    lineHeight: 44,
   },
   h2: {
     fontSize: typography.fontSize['3xl'],
     fontWeight: typography.fontWeight.bold,
-    lineHeight: typography.lineHeight.tight,
+    lineHeight: 36,
   },
   h3: {
     fontSize: typography.fontSize['2xl'],
     fontWeight: typography.fontWeight.semibold,
-    lineHeight: typography.lineHeight.tight,
+    lineHeight: 30,
   },
   h4: {
     fontSize: typography.fontSize.xl,
     fontWeight: typography.fontWeight.semibold,
-    lineHeight: typography.lineHeight.normal,
+    lineHeight: 28,
   },
   body: {
     fontSize: typography.fontSize.md,
     fontWeight: typography.fontWeight.normal,
-    lineHeight: typography.lineHeight.normal,
+    lineHeight: 24,
   },
   bodyLarge: {
     fontSize: typography.fontSize.lg,
     fontWeight: typography.fontWeight.normal,
-    lineHeight: typography.lineHeight.normal,
+    lineHeight: 28,
   },
   bodySmall: {
     fontSize: typography.fontSize.sm,
     fontWeight: typography.fontWeight.normal,
-    lineHeight: typography.lineHeight.normal,
+    lineHeight: 20,
   },
   caption: {
     fontSize: typography.fontSize.xs,
     fontWeight: typography.fontWeight.normal,
-    lineHeight: typography.lineHeight.normal,
+    lineHeight: 16,
   },
   button: {
     fontSize: typography.fontSize.md,
     fontWeight: typography.fontWeight.semibold,
-    lineHeight: typography.lineHeight.normal,
+    lineHeight: 24,
   },
 };

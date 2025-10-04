@@ -60,10 +60,10 @@ export const Button: React.FC<ButtonProps> = ({
     };
 
     const variantStyles: Record<string, TextStyle> = {
-      primary: { color: theme.colors.textDark },
-      secondary: { color: theme.colors.textDark },
-      outline: { color: theme.colors.primary },
-      ghost: { color: theme.colors.primary },
+      primary: { color: theme.colors.text }, // White text on green gradient
+      secondary: { color: theme.colors.text }, // White text
+      outline: { color: theme.colors.primary }, // Green text on transparent
+      ghost: { color: theme.colors.text }, // White text on transparent
     };
 
     return { ...baseStyle, ...variantStyles[variant] };
@@ -84,7 +84,7 @@ export const Button: React.FC<ButtonProps> = ({
           style={[StyleSheet.absoluteFill, { borderRadius: theme.borderRadius.lg }]}
         />
         {loading ? (
-          <ActivityIndicator color={theme.colors.textDark} />
+          <ActivityIndicator color={theme.colors.text} />
         ) : (
           <Text style={getTextStyle()}>{title}</Text>
         )}
@@ -139,10 +139,10 @@ export const Button: React.FC<ButtonProps> = ({
       onPress={onPress}
       disabled={disabled || loading}
       activeOpacity={0.8}
-      style={[getButtonStyle(), { backgroundColor: theme.colors.secondary }, style]}
+      style={[getButtonStyle(), { backgroundColor: theme.colors.primary }, style]}
     >
       {loading ? (
-        <ActivityIndicator color={theme.colors.textDark} />
+        <ActivityIndicator color={theme.colors.text} />
       ) : (
         <Text style={getTextStyle()}>{title}</Text>
       )}
